@@ -1,0 +1,19 @@
+@import 'styles/abstracts/variables';
+
+@import 'styles/base/base';
+@import 'styles/base/typography';
+
+@import 'styles/components/body';
+@import 'styles/components/header';
+@import 'styles/components/tabs';
+@import 'styles/components//qr';
+
+.App {
+  text-align: center;
+  background-color: $background-color;
+  min-height: 100vh;
+
+  &_CTA {
+    display: inline-block;
+  }
+}

@@ -1,0 +1,36 @@
+.header {
+  display: block;
+  height: 15rem;
+
+  &_grid {
+    display: grid;
+    border-width: 0.3rem;
+    border-radius: 0.5rem;
+    grid-template-columns: 30vw 1fr;
+    align-items: center;
+    justify-content: center;
+
+    padding: 1rem;
+  }
+
+  &_image {
+    width: 30vw;
+    max-width: 200px;
+    border-radius: 50%;
+  }
+
+  &_paragraph {
+    padding: 0.5rem;
+    width: 65vw;
+
+    > * {
+      overflow-wrap: break-word;
+    }
+
+    &_name {
+      font-size: 2rem;
+      color: $title-color;
+      font-weight: 800;
+    }
+  }
+}
