@@ -6,7 +6,9 @@
 @import 'styles/components/body';
 @import 'styles/components/header';
 @import 'styles/components/tabs';
-@import 'styles/components//qr';
+@import 'styles/components/qr';
+
+@import 'styles/utils/utils';
 
 .App {
   text-align: center;
@@ -15,5 +17,12 @@
 
   &_CTA {
     display: inline-block;
+  }
+
+  &_sub {
+    display: block;
+    margin: 0 auto;
+    max-width: 40rem;
+    padding: 0.5rem;
   }
 }
