@@ -14,21 +14,26 @@
     align-items: center;
 
     background-color: $button-color;
-    margin: 1rem;
-    padding: 0.5rem;
+    border: solid $font-color;
+    border-width: 0.2rem;
     border-radius: 5rem;
-    color: $color-black;
-    border: transparent;
-    width: 70vw;
+
+    padding: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    min-width: 250px;
+    max-width: 500px;
 
     margin: 2rem;
 
-    max-width: 280px;
+    font-size: 1.5rem;
+    color: $title-color;
 
     &_icon {
-      width: 7vw;
+      width: 5vw;
       margin: 0.7rem;
-      max-width: 40px;
+      max-width: 2.5rem;
     }
   }
 }

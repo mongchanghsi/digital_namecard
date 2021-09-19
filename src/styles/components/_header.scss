@@ -1,35 +1,42 @@
 .header {
-  display: block;
-  height: 15rem;
+  display: flex;
+  align-items: center;
+  height: 16rem;
+  margin: 0.5rem;
+  padding: 1rem;
 
   &_grid {
     display: grid;
     border-width: 0.3rem;
     border-radius: 0.5rem;
-    grid-template-columns: 30vw 1fr;
+
+    grid-template-columns: 35% 65%;
     align-items: center;
     justify-content: center;
-
-    padding: 1rem;
   }
 
   &_image {
-    width: 30vw;
-    max-width: 200px;
+    width: 110%;
     border-radius: 50%;
   }
 
   &_paragraph {
+    display: block;
+    margin: 0 auto;
     padding: 0.5rem;
-    width: 65vw;
+    width: 80%;
 
     > * {
       overflow-wrap: break-word;
     }
 
+    > p {
+      color: $font-color;
+    }
+
     &_name {
       font-size: 2rem;
-      color: $title-color;
+      color: $title-color !important;
       font-weight: 800;
     }
   }

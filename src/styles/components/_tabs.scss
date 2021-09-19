@@ -4,24 +4,25 @@
   justify-content: center;
 
   background-color: $button-color;
+  border: solid $font-color;
   border-width: 0.2rem;
   border-radius: 5rem;
   padding: 0.5rem;
   padding-left: 1rem;
   padding-right: 1rem;
-  color: $color-black;
 
   margin: 2rem;
 
-  min-width: 250px;
-  max-width: 500px;
+  min-width: 25rem;
+  max-width: 50rem;
 
   text-decoration: none;
   font-size: 1.5rem;
+  color: $title-color;
 
   &_icon {
-    width: 7vw;
+    width: 5vw;
     margin: 0.7rem;
-    max-width: 40px;
+    max-width: 2.5rem;
   }
 }
