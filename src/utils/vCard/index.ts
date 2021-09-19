@@ -31,7 +31,7 @@ const vCardGenerator = async (data: any) => {
   vCard.title = data.title;
 
   // vCard.url = 'https://github.com/enesser';
-  // vCard.note = 'Notes on Eric';
+  vCard.note = `Met ${data.firstName} ${data.lastName} at ...`;
 
   data.links.forEach((link: any) => {
     vCard.socialUrls[link.text] = link.link;
