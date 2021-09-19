@@ -1,5 +1,4 @@
 import React from 'react';
-import ProfilePicture from '../../assets/temp/photo.jpeg';
 
 const Header = ({ data }: { data: any }) => {
   const craftName = (): string => {
@@ -26,7 +25,11 @@ const Header = ({ data }: { data: any }) => {
     <div className='header'>
       <div className='header_grid'>
         <div>
-          <img className='header_image' src={ProfilePicture} alt='profile' />
+          <img
+            className='header_image'
+            src={data.profilePicture}
+            alt='profile'
+          />
         </div>
         <div className='header_paragraph'>
           <p className='header_paragraph_name'>{craftName()}</p>
