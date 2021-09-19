@@ -4,8 +4,10 @@ import Tabs from '../Tabs';
 const Body = ({ data }: { data: any }) => {
   return (
     <div className='body'>
-      {data.links.map((link: any) => (
-        <Tabs data={link} />
+      {data.links.map((link: any, index: number) => (
+        <div key={index}>
+          <Tabs data={link} />
+        </div>
       ))}
     </div>
   );
