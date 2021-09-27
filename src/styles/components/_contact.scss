@@ -1,0 +1,53 @@
+.contact {
+  &_grid {
+    display: grid;
+    // border-width: 0.3rem;
+    // border-radius: 0.5rem;
+
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $button-color;
+    border: solid $font-color;
+    border-width: 0.2rem;
+    border-radius: 5rem;
+
+    padding: 0.5rem;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+
+    min-width: 125px;
+    max-width: 250px;
+
+    margin: 0.5rem;
+
+    font-size: 1.2rem;
+    color: $title-color;
+
+    &_icon {
+      width: 5vw;
+      margin: 0.7rem;
+      max-width: 2rem;
+    }
+  }
+}
+
+textarea {
+  padding: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  font-size: 1.4rem;
+
+  &:focus {
+    outline: none !important;
+    border-color: $font-color;
+    box-shadow: 0 0 14px $font-color;
+  }
+}
