@@ -19,30 +19,30 @@ If you would like to deploy this digital namecard on your domain, do take note t
 3. Replace the following code snippet
 
 ```
-			if (vCard.socialUrls) {
-			 	for (var key in vCard.socialUrls) {
-			 		if (vCard.socialUrls.hasOwnProperty(key) &&
-			 			vCard.socialUrls[key]) {
-			 			formattedVCardString += 'X-SOCIALPROFILE' + encodingPrefix + ';TYPE=' + key + ':' + e(vCard.socialUrls[key]) + nl();
-			 		}
-			 	}
-			 }
+if (vCard.socialUrls) {
+	for (var key in vCard.socialUrls) {
+		if (vCard.socialUrls.hasOwnProperty(key) &&
+			vCard.socialUrls[key]) {
+			formattedVCardString += 'X-SOCIALPROFILE' + encodingPrefix + ';TYPE=' + key + ':' + e(vCard.socialUrls[key]) + nl();
+		}
+	}
+}
 ```
 
 with
 
 ```
-		  if (vCard.socialUrls) {
-				let index = 0;
-				for (var key in vCard.socialUrls) {
-				  index++;
-				  if (vCard.socialUrls.hasOwnProperty(key) &&
-				  vCard.socialUrls[key]) {
-				    formattedVCardString += 'item' + index + '.URL:' + vCard.socialUrls[key] + nl();
-				    formattedVCardString += 'item' + index + '.X-ABLabel:' + key + nl();
-				  }
-				}
-			}
+if (vCard.socialUrls) {
+	let index = 0;
+	for (var key in vCard.socialUrls) {
+		index++;
+		if (vCard.socialUrls.hasOwnProperty(key) &&
+		vCard.socialUrls[key]) {
+			formattedVCardString += 'item' + index + '.URL:' + vCard.socialUrls[key] + nl();
+			formattedVCardString += 'item' + index + '.X-ABLabel:' + key + nl();
+		}
+	}
+}
 ```
 
 This fix is contributed by mgecawicz from https://github.com/enesser/vCards-js/issues/56
