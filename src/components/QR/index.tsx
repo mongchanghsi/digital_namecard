@@ -21,7 +21,7 @@ const QR = () => {
         <img className='qr_image' src={qrImage} alt='qrImage' />
       )}
       <button
-        className='qr_button'
+        className='qr_button no_margin_top'
         type='button'
         onClick={() => setShowQR(!showQR)}
       >
