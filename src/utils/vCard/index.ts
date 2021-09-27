@@ -14,7 +14,7 @@ const getBase64FromUrl = async (url: string) => {
   });
 };
 
-const vCardGenerator = async (data: any) => {
+const vCardGenerator = async (data: any, note: string) => {
   let vCard = vCardsJS();
   const base64String: any = await getBase64FromUrl(data.profilePicture);
 
@@ -31,7 +31,7 @@ const vCardGenerator = async (data: any) => {
   vCard.title = data.title;
 
   // vCard.url = 'https://github.com/enesser';
-  vCard.note = `Met ${data.firstName} ${data.lastName} at ...`;
+  vCard.note = note.trim().length > 0 ? note : '';
 
   data.links.forEach((link: any) => {
     vCard.socialUrls[link.text] = link.link;
