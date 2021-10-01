@@ -5,6 +5,7 @@ import mockData from './utils/mockData/mockJson';
 import Body from './components/Body';
 import QR from './components/QR';
 import AddContact from './components/AddContact';
+import Footer from './components/Footer';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         </div>
         <Body data={mockData} />
       </div>
+      <Footer />
     </div>
   );
 };
