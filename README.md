@@ -1,5 +1,9 @@
 # Digital Namecard
 
+## Sample
+
+Visit [Eric Mong's digital namecard](https://ericmong-namecard.netlify.app/) for a live demo, best view / experience in mobile.
+
 ## How to use
 
 1. Clone project
