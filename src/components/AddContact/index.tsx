@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import vCardGenerator from '../../utils/vCard';
 import AddIcon from '../../assets/addContact.png';
 import CloseIcon from '../../assets/close.png';
+import IProfile from '../../utils/interface/Profile';
 
-const AddContact = ({ data }: { data: any }) => {
+const AddContact = ({ data }: { data: IProfile }) => {
   const [openTab, setOpenTab] = useState<boolean>(false);
   const [text, setText] = useState<string>('');
 
@@ -12,6 +13,7 @@ const AddContact = ({ data }: { data: any }) => {
       {openTab ? (
         <div>
           <textarea
+            aria-label='comment'
             id='w3review'
             name='w3review'
             rows={4}
@@ -22,6 +24,7 @@ const AddContact = ({ data }: { data: any }) => {
           ></textarea>
           <div className='contact_grid'>
             <button
+              aria-label='doneContactButton'
               className='contact_button no_margin_bottom'
               onClick={() => vCardGenerator(data, text)}
             >
@@ -33,6 +36,7 @@ const AddContact = ({ data }: { data: any }) => {
               Done
             </button>
             <button
+              aria-label='closeContactButton'
               className='contact_button no_margin_bottom'
               onClick={() => setOpenTab(false)}
             >
@@ -47,6 +51,7 @@ const AddContact = ({ data }: { data: any }) => {
         </div>
       ) : (
         <button
+          aria-label='addContactButton'
           className='qr_button no_margin_bottom'
           onClick={() => setOpenTab(true)}
         >
