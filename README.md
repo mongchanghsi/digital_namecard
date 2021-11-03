@@ -7,7 +7,7 @@ Visit [Eric Mong's digital namecard](https://ericmong-namecard.netlify.app/) for
 ## How to use
 
 1. Clone project
-2. Navigate to `./src/utils/mockData`, and change the JSON object of `data` for your namecard content
+2. Navigate to `./src/utils/data/data.ts`, and change the JSON object of `data` for your namecard content
 3. perform `npm install` to install the dependencies
 4. cd into the project and perform `npm start`
 5. You should be able to view the prototype in port 3000, make sure you are viewing it on mobile mode

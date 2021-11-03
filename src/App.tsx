@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.scss';
 import Header from './components/Header';
-import mockData from './utils/mockData/mockJson';
+import data from './utils/data/data';
 import Body from './components/Body';
 import QR from './components/QR';
 import AddContact from './components/AddContact';
@@ -11,12 +11,12 @@ const App = () => {
   return (
     <div className='App'>
       <div className='App_sub'>
-        <Header data={mockData} />
+        <Header data={data} />
         <div className='App_CTA'>
           <QR />
-          <AddContact data={mockData} />
+          <AddContact data={data} />
         </div>
-        <Body data={mockData} />
+        <Body data={data} />
       </div>
       <Footer />
     </div>
