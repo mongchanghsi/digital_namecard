@@ -1,12 +1,11 @@
 import React from 'react';
+import IProfileBasicDetails from '../../utils/interface/ProfileBasicDetail';
 
-const Header = ({ data }: { data: any }) => {
+const Header = ({ data }: { data: IProfileBasicDetails }) => {
   const craftName = (): string => {
     let output = '';
 
-    if (data.firstName) {
-      output += data.firstName;
-    }
+    output += data.firstName;
 
     if (data.middleName) {
       output += ' ';
