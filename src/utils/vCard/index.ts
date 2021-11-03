@@ -1,5 +1,6 @@
 import FileSaver from 'file-saver';
 import vCardsJS from 'vcards-js';
+import IProfile from '../interface/Profile';
 
 const getBase64FromUrl = async (url: string) => {
   const data = await fetch(url);
@@ -14,21 +15,21 @@ const getBase64FromUrl = async (url: string) => {
   });
 };
 
-const vCardGenerator = async (data: any, note: string) => {
+const vCardGenerator = async (data: IProfile, note: string) => {
   let vCard = vCardsJS();
   const base64String: any = await getBase64FromUrl(data.profilePicture);
 
   vCard.version = '3.0';
   vCard.firstName = data.firstName;
-  vCard.middleName = data.middleName;
+  vCard.middleName = data.middleName || '';
   vCard.lastName = data.lastName;
   vCard.email = data.email;
-  vCard.organization = data.organization;
+  vCard.organization = data.organization || '';
   // vCard.photo.url = String(base64String).replace('data:image/png;base64,', '');
   vCard.photo.url = base64String.slice(base64String.indexOf(',') + 1);
   vCard.photo.base64 = true;
-  vCard.cellPhone = data.phone;
-  vCard.title = data.title;
+  vCard.cellPhone = data.phone || '';
+  vCard.title = data.title || '';
 
   // vCard.url = 'https://github.com/enesser';
   vCard.note = note.trim().length > 0 ? note : '';
